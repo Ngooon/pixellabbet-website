@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172909379-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-172909379-1');
+        </script>
+
+
+        <title>Pixellabbet - Tjänster</title>
+        <link rel="stylesheet" href="./CSS/main.css">
+        <link rel="stylesheet" href="./CSS/header.css">
+        <link rel="stylesheet" href="./CSS/teknik.css">
+        <link rel="stylesheet" href="./CSS/footer.css">
+        <link rel="stylesheet" href="./CSS/responsive.css">
+
+        <link rel="icon" href="./images/Logo.svg">
+        <meta charset="utf-8">
+        <meta name="description" content="Professionella drönartjänster">
+        <meta name="keywords" content="Drönare, Flygfoto">
+        <meta name="author" content="Pixellabbet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+            <div class="center-box">
+                <a href="/" class="logo"><img src="./images/LogoText_Låg.png" alt="" id="header-logo"></a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="menu">
+                    <li><a href="/">Hem</a></li>
+                    <li><a href="/tjanster.html">Tjänster</a></li>
+                    <li><a href="/teknik.html">Teknik</a></li>
+                    <li><a href="/kontakt.php">Kontakt</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="headline-img">
+                <div class="center-box">
+                    <h1>Teknik</h1>
+                    <p>Vi flyger endast med kvalitativa drönare för att garantera bra resultat och hög säkerhet.</p>   
+                </div>
+            </div>
+
+            <div class="center-box">
+                <div class="row card last">
+                    <div class="col-12 col-s-12">
+                        <h1>DJI Phantom 4 Pro</h1>
+                    </div>
+                    <div class="col-6 col-s-12 text">
+                        <p>Vi flyger med en DJI Phantom 4 Pro, utrustad med en 20 Mp kamera och en uppsjö med sensorer för noggrann positionering.</p>
+                        <p>Kameran går att följa direkt från pilotens kontroll. Det möjliggör för piloten att se hur bilden kommer att bli, innan den tas. Dessutom kan kunden kan få en en större inverkan på hur slutresultatet ska bli.</p>
+                        <p>Upplösningen på filmerna kan vara upp till 4K. Men då vanlig HD oftast är tillräckligt brukar vi filma i 4K och sedan rendera om filmerna till HD-upplösning. Då får man nämligen möjlighet att kunna zooma in utan att tappa kvalitén.</p>
+                        <p>Alla sensorer samverkar för att kunna hålla drönare still, även i friska vindar på upp till 10 m/s. Dem upptäcker även hinder och ser till att drönaren undviker dessa.</p>
+                        <p>Drönaren går i ungefär 30 minuter på ett batteri. I teorin kan man köra upp till 72 km/h, 7 km från kontrollen. Men, då lagen säger det, håller piloten alltid drönaren på ett avstånd så att denne kan se den utan hjälpmedel. Vad gäller höjden, så är det 120 m upp som är maxgräns.</p>
+                        <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                    </div>
+                    <div class="col-6 col-s-12 image">
+                        <img src="./images/DJI_Phantom_4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <h1>&copy; 2019-<script>document.write(new Date().getFullYear());</script> Pixellabbet</h1>
+        </footer>
+        
+        <script>
+            // Max 450
+            function funcMax450(varMax450) {
+                if (varMax450.matches) { // If media query matches
+                    document.getElementById("header-logo").src = "images/Logo.svg";
+                } else {
+                    
+                    document.getElementById("header-logo").src = "images/LogoText_Låg.png";
+                }
+            }
+        
+            var varMax450 = window.matchMedia("(max-width: 450px)")
+            funcMax450(varMax450) // Call listener function at run time
+            varMax450.addListener(funcMax450) // Attach listener function on state changes
+        </script>
+    </body>
+</html>

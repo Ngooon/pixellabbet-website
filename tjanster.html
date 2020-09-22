@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172909379-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-172909379-1');
+        </script>
+
+
+        <title>Pixellabbet - Tjänster</title>
+        <link rel="stylesheet" href="./CSS/main.css">
+        <link rel="stylesheet" href="./CSS/header.css">
+        <link rel="stylesheet" href="./CSS/tjanster.css">
+        <link rel="stylesheet" href="./CSS/footer.css">
+        <link rel="stylesheet" href="./CSS/responsive.css">
+
+        <link rel="icon" href="./images/Logo.svg">
+        <meta charset="utf-8">
+        <meta name="description" content="Professionella drönartjänster">
+        <meta name="keywords" content="Drönare, Flygfoto">
+        <meta name="author" content="Pixellabbet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+            <div class="center-box">
+                <a href="/" class="logo"><img src="./images/LogoText_Låg.png" alt="" id="header-logo"></a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="menu">
+                    <li><a href="/">Hem</a></li>
+                    <li><a href="/tjanster.html">Tjänster</a></li>
+                    <li><a href="/teknik.html">Teknik</a></li>
+                    <li><a href="/kontakt.php">Kontakt</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="headline-img">
+                <div class="center-box">
+                    <h1>Tjänster</h1>
+                    <p>Vi erbjuder en mängd olika tjänster och anpassar oss alltid för varje uppdrag.</p>   
+                </div>
+            </div>
+
+            <div class="center-box">
+                <div class="row card">
+                    <div class="col-6 col-s-12 text">
+                        <h1>Skogsinspektering</h1>
+                        <p>Med drönare kan man enkelt få en överblick över sin skog. Man kan på ett smidigt sätt upptäcka problem, som på bilden där några barkborreträd kan ses från ovan.</p>
+                        <p>Många gånger kan det vara effektivare att åka ut med drönare, för att se om en manuell inspektion är nödvändig. Dessutom är det mycket säkrare att flyga med drönare efter en storm för att inventera eventuella vindfällor.</p>
+                        <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                    </div>
+                    <div class="col-6 col-s-12 image">
+                        <img src="./images/Barkborreträd_HD.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="row card">
+                    <div class="col-6 col-s-12 text">
+                        <h1>Ortofoto</h1>
+                        <p>En rad av drönarbilder som lagts ihop och korrigerats bildar något som liknar en satellitkarta, men som är bra mycket mer detaljerad. Efter att man till exempel gjort en ny skogsväg eller en avverkning kan man uppdatera området i skogsbruksplanen med hjälp av ett ortofoto.</p>
+                        <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                    </div>
+                    <div class="col-6 col-s-12 image">
+                        <img src="./images/Ortofoto.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="row card last">
+                    <div class="col-6 col-s-12 text">
+                        <h1>Mäklarfoto</h1>
+                        <p>Inget kan sammanfatta huset så bra som en drönarbild. Hela huset med sina tillhörigheter kommer med och ger en säljande överblick för potentiella köpare. </p>
+                        <a class="button blue solid" href="/kontakt.php">Kontakta oss</a>
+                    </div>
+                    <div class="col-6 col-s-12 image">
+                        <img src="./images/start-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <h1>&copy; 2019-<script>document.write(new Date().getFullYear());</script> Pixellabbet</h1>
+        </footer>
+        
+        <script>
+            // Max 450
+            function funcMax450(varMax450) {
+                if (varMax450.matches) { // If media query matches
+                    document.getElementById("header-logo").src = "images/Logo.svg";
+                } else {
+                    
+                    document.getElementById("header-logo").src = "images/LogoText_Låg.png";
+                }
+            }
+        
+            var varMax450 = window.matchMedia("(max-width: 450px)")
+            funcMax450(varMax450) // Call listener function at run time
+            varMax450.addListener(funcMax450) // Attach listener function on state changes
+        </script>
+    </body>
+</html>
