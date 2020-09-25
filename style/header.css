@@ -1,10 +1,6 @@
 /* header */
 
-a {
-  color: #000;
-}
-
-.header {
+header {
   background-color: #fff;
   box-shadow: 0px 3px 4px 0 rgba(0,0,0,.1);
   position: fixed;
@@ -13,11 +9,11 @@ a {
   z-index: 99;
   height: 100px;
 }
-.header .center-box {
+header .center-box {
   height: 100%;
 }
 
-.header ul {
+header ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -25,19 +21,19 @@ a {
   background-color: #fff;
 }
 
-.header li a {
+header li a {
   display: block;
   padding: 20px 20px;
   border-top: 1px solid #f4f4f4;
   text-decoration: none;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
+header li a:hover,
+header .menu-btn:hover {
   background-color: #f4f4f4;
 }
 
-.header .logo {
+header .logo {
   display: block;
   float: left;
   font-size: 2em;
@@ -47,13 +43,13 @@ a {
   height: 100%;
 }
 
-.header .logo img {
+header .logo img {
   height: 100%;
 }
 
 /* menu */
 
-.header .menu {
+header .menu {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
@@ -61,7 +57,7 @@ a {
 
 /* menu icon */
 
-.header .menu-icon {
+header .menu-icon {
   cursor: pointer;
   float: right;
   padding: 49px 20px;
@@ -69,7 +65,7 @@ a {
   user-select: none;
 }
 
-.header .menu-icon .nav-icon {
+header .menu-icon .nav-icon {
   background: #333;
   display: block;
   height: 2px;
@@ -78,8 +74,8 @@ a {
   width: 18px;
 }
 
-.header .menu-icon .nav-icon:before,
-.header .menu-icon .nav-icon:after {
+header .menu-icon .nav-icon:before,
+header .menu-icon .nav-icon:after {
   background: #333;
   content: '';
   display: block;
@@ -89,35 +85,35 @@ a {
   width: 100%;
 }
 
-.header .menu-icon .nav-icon:before {
+header .menu-icon .nav-icon:before {
   top: 5px;
 }
 
-.header .menu-icon .nav-icon:after {
+header .menu-icon .nav-icon:after {
   top: -5px;
 }
 
 /* menu btn */
 
-.header .menu-btn {
+header .menu-btn {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
+header .menu-btn:checked ~ .menu {
   max-height: 240px;
   box-shadow: 0px 10px 10px 5px rgba(0,0,0,.1);
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
+header .menu-btn:checked ~ .menu-icon .nav-icon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+header .menu-btn:checked ~ .menu-icon .nav-icon:before {
   transform: rotate(-45deg);
   top:0;
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   transform: rotate(45deg);
   top:0;
 }
@@ -126,24 +122,25 @@ a {
 /* 48em = 768px @ 16pt font */
 
 @media (min-width: 800px) {
-  .header ul {
+  header ul {
     box-shadow: none;
   }
 
-  .header li {
+  header li {
     float: left;
 
   }
-  .header li a {
+  header li a {
     padding: 41px 25px;
     border-top: none;
   }
-  .header .menu {
+  header .menu {
     clear: none;
     float: right;
     max-height: none;
   }
-  .header .menu-icon {
+  header .menu-icon {
     display: none;
   }
 }
+
