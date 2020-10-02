@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: Arial;
+  font-size: 16px;
 }
 
 /* Chrome, Safari and Opera */
@@ -23,20 +24,20 @@ h1 {
 }
 
 h2 {
-  margin-top: 5px;
+  margin-top: 0.3em;
   font-weight: lighter;
   letter-spacing: .75px;
   font-size: 2em;
 }
 
 h3 {
-  font-size: 17px;
+  font-size: 1.1em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 p {
-  line-height: 21px;
+  line-height: 1.3em;
 }
 
 a {
@@ -268,7 +269,7 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after {
 
 
 /* Footer */
-.content {
+main {
   background-color: #fff;
   box-shadow: 0px 0px 10px 5px rgba(0,0,0,.1);
   margin-bottom: 50px;
@@ -307,7 +308,7 @@ footer h2 {
       line-height: 75px;
   }
 
-  .content {
+  main {
       margin-bottom: 75px;
       min-height: calc(100vh - 75px - 100px);
   }
@@ -321,7 +322,7 @@ footer h2 {
 
 /* Start image */
 
-.start-img {
+section#start-img{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -337,39 +338,38 @@ footer h2 {
   z-index: 0;
 }
 
-.start-img .center-box {
-  height: auto;
+#start-img .center-box {
   max-width: 650px;
 }
 
-.start-img .center-box h2 {
+#start-img h2 {
   font-size: 45px;
   font-weight: bold;
 }
 
-.start-img .center-box p {
+#start-img p {
   letter-spacing: .25px;
   line-height: 22px;
 }
 
-.start-img .center-box h2,
-.start-img .center-box p {
+#start-img h2,
+#start-img p {
   margin: 0 20px 25px;
 }
 
-.start-img .button {
+#start-img .button {
 	border-radius: 50px;
 	padding: 14px 19px;
 }
 
-.start-img .button.white:hover {
+#start-img .button.white:hover {
 	background-color: rgba(255, 255, 255, 0.25);
 }
 
 
 /* Three cards */
 
-.three-cards {
+#three-cards {
   box-shadow: 0 1px 8px 4px rgba(0,0,0,.1);
   z-index: 2;
   position: relative;
@@ -381,39 +381,37 @@ footer h2 {
   border-radius: 4px;
 }
 
-.three-cards .card {
+#three-cards .card {
   display: table-cell;
   text-align: center;
   border-bottom: 1px solid lightgray;
   height: 100%;
 }
 
-.three-cards .card p {
-  font-size: 16px;
-  line-height: 22px;
+#three-cards .card p {
   color: gray;
 }
 
 
 /* About */
 
-.about {
+#about {
   margin-bottom: 0px;
 }
 
-.about .image {
+#about .image {
   position: relative;
   z-index: 2;
   height: 100%;
   padding: 30px 15px;
 }
 
-.about .image img {
+#about .image img {
   width: 100%;
   border-radius: 4px;
 }
 
-.about .text-holder {
+#about .text-holder {
   position: relative;
   z-index: 1;
   padding: 0;
@@ -421,7 +419,7 @@ footer h2 {
   /* height: 100%; */
 }
 
-.about .text {
+#about .text {
   box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
   border-radius: 4px;
   padding: 15px;
@@ -431,34 +429,34 @@ footer h2 {
   background-color: #fff;
 }
 
-.about .text h3 {
+#about .text h3 {
   margin-bottom: 0;
 }
 
 /* Services */
 
-.services {
+#services {
   border-radius: 4px;
 	padding: 20px 0px;
 	margin-bottom: 50px;
 }
 
-.services .headliner {
+#services .headliner {
   text-align: center;
   padding-top: 20px;
 }
 
-.services .headliner p {
+#services .headliner p {
   color: gray;
 }
 
-.services .cards {
+#services .cards {
   margin-right: auto;
   margin-left: auto;
 	max-width: 850px;
 }
 
-.services .card {
+#services .card {
   text-align: center;
   border-radius: 3px;
   margin: 10px 0px;
@@ -466,20 +464,20 @@ footer h2 {
   box-shadow: 0 0px 6px 3px rgba(0,0,0,.1);
 }
 
-.services .card .icon{
+#services .card .icon{
   height: 75px;
 	margin: 20px 0px 25px 0px;
 }
 
-.services .card p {
+#services .card p {
 	margin-bottom: 35px;
 }
 
-.services .info p {
+#services .info p {
   margin-bottom: 7px;
 }
 
-.services .cards .button {
+#services .cards .button {
 	border-width: 3px;
 	float: none;
 	box-shadow: none;
@@ -487,11 +485,11 @@ footer h2 {
 
 /* Contact */
 
-.contact {
+#contact {
   margin-bottom: 0px;
 }
 
-.contact .text-holder {
+#contact .text-holder {
   position: relative;
   z-index: 1;
   padding: 0;
@@ -499,7 +497,7 @@ footer h2 {
   /* height: 100%; */
 }
 
-.contact .text {
+#contact .text {
   box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
   border-radius: 4px;
 	padding: 20px 15px 60px 15px;
@@ -507,15 +505,15 @@ footer h2 {
   background-color: #fff;
 }
 
-.contact .text h3 {
+#contact .text h3 {
   margin-bottom: 0;
 }
 
-.contact .text .button {
+#contact .text .button {
 	float: right;
 }
 
-.contact .image {
+#contact .image {
   position: relative;
   z-index: 2;
   height: 100%;
@@ -523,7 +521,7 @@ footer h2 {
   margin-top: -35px;
 }
 
-.contact .image img {
+#contact .image img {
   width: 100%;
   border-radius: 4px;
 }
@@ -540,31 +538,31 @@ footer h2 {
 
 		/* Three-cards */
 
-    .three-cards .card {
+    #three-cards .card {
         border-bottom: none;
         border-right: 1px solid lightgray;
     }
-    .three-cards .last {
+    #three-cards .last {
         border-right: none;
     }
     
 
 		/* About */
 		
-    .about {
+    #about {
       margin-bottom: 25px;
     }
 
-    .about .image {
+    #about .image {
         z-index: 1;
     }
 
-    .about .text-holder {
+    #about .text-holder {
         float: right;
         z-index: 3;
     }
     
-    .about .text {
+    #about .text {
         padding: 25px;
         padding-top: 30px;
         margin-top: -250px;
@@ -573,18 +571,18 @@ footer h2 {
 
 		/* Services */
 
-    .services .card {
+    #services .card {
       border: none;
 			margin: 0 0 20px 0;
 			padding-bottom: 30px;
       text-align: left;
     }
 
-    .services .card .last {
+    #services .card .last {
       margin: 0;
     }
 
-    .services .card .icon {
+    #services .card .icon {
       margin: 20px 25px 25px 0px;
       float: left;
       display: flex;
@@ -592,33 +590,33 @@ footer h2 {
       align-items: center;
     }
 
-		.services .card p {
+		#services .card p {
 			margin-bottom: 20px;
 		}
 
-    .services .cards .button {
+    #services .cards .button {
       float: right;
     }
     
 
 		/* Contact */
 
-		.contact {
+		#contact {
       margin-bottom: 25px;
     }
 
-    .contact .text-holder {
+    #contact .text-holder {
 			float: left;
 			z-index: 3;
     }
     
-    .contact .text {
+    #contact .text {
 			padding: 25px;
 			padding-top: 30px;
 			/* margin-top: -250px; */
     }
 
-    .contact .image {
+    #contact .image {
 			z-index: 1;
 			float: right;
 			margin-top: -200px;
@@ -630,7 +628,7 @@ footer h2 {
 
 	/* About */
 
-	.about .text {
+	#about .text {
 			padding: 50px;
 			padding-top: 60px;
 			margin-top: -300px;
@@ -639,23 +637,23 @@ footer h2 {
 	
 	/* Services */
 
-	.services .info p {
+	#services .info p {
 		margin-bottom: 16px;
 	}
 	
 
 	/* Contact */
 
-	.contact .text {
+	#contact .text {
 		padding: 50px;
 		padding-top: 60px;
 	}
 
-	.contact .text .button {
+	#contact .text .button {
 		margin-top: 10px;
 	}
 
-	.contact .image {
+	#contact .image {
 		margin-top: -250px;
 	}
 }
@@ -665,7 +663,7 @@ footer h2 {
 
 	/* About */
 	
-	.about {
+	#about {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -673,19 +671,19 @@ footer h2 {
 		margin-bottom: 50px;
 	}
 
-	.about .image {
+	#about .image {
 		height: 100%;
 		z-index: 3;
 	}
 
-	.about .text-holder {
+	#about .text-holder {
 		z-index: 1;
 		padding: 0px;
 		margin: 0px;
 		height: auto;
 	}
 
-	.about .text {
+	#about .text {
 		margin: 0 0 0 -50px;
 		padding: 60px;
 		padding-left: 115px;
@@ -695,27 +693,26 @@ footer h2 {
 
 	/* Contact */
 	
-	.contact {
+	#contact {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		max-width: 750px;
 		margin-bottom: 50px;
 	}
 
-	.contact .text-holder {
+	#contact .text-holder {
 		z-index: 1;
 		padding: 0px;
 		margin: 0px;
 		height: auto;
 	}
 
-	.contact .text {
+	#contact .text {
 		padding: 60px;
 		padding-right: 120px;
 	}
 
-	.contact .image {
+	#contact .image {
 		margin: 0 0 0 -80px;
 		height: 100%;
 		z-index: 3;
@@ -727,11 +724,11 @@ footer h2 {
 
 	/* About */
 
-	.about .image img{
+	#about .image img{
 		max-height: 380px;
 	}
 
-	.about .text {
+	#about .text {
 		margin: 0 0 0 -80px;
 		padding: 90px;
 		padding-left: 125px;
@@ -740,11 +737,11 @@ footer h2 {
 
 	/* Conatct */
 
-	.contact .image img{
+	#contact .image img{
 		max-height: 380px;
 	}
 
-	.contact .text {
+	#contact .text {
 		padding: 90px;
 		padding-right: 135px;
 	}
