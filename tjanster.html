@@ -23,9 +23,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header class="header">
+        <header>
             <div class="center-box">
-                <a href="/" class="logo"><img src="./images/LogoText_Låg.png" alt="" id="header-logo"></a>
+                <a href="/" class="logo">
+                    <img src="./images/LogoText_Låg.png" alt="" id="header-logo">
+                </a>
                 <input class="menu-btn" type="checkbox" id="menu-btn" />
                 <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
                 <ul class="menu">
@@ -38,16 +40,16 @@
         </header>
 
         <!-- Content -->
-        <div class="content">
-            <div class="headline-img">
+        <main>
+            <section class="site-header">
                 <div class="center-box">
                     <h2>Tjänster</h2>
                     <p>Vi erbjuder en mängd olika tjänster och anpassar oss alltid för varje uppdrag.</p>   
                 </div>
-            </div>
+            </section>
 
-            <div class="center-box">
-                <div class="row card">
+            <section class="center-box">
+                <article class="row card">
                     <div class="col-6 col-s-12 text">
                         <h2>Skogsinspektering</h2>
                         <p>Med drönare kan man enkelt få en överblick över sin skog. Man kan på ett smidigt sätt upptäcka problem, som på bilden där några barkborreträd kan ses från ovan.</p>
@@ -57,9 +59,9 @@
                     <div class="col-6 col-s-12 image">
                         <img src="./images/Barkborreträd_HD.jpg" alt="">
                     </div>
-                </div>
+                </article>
 
-                <div class="row card">
+                <article class="row card">
                     <div class="col-6 col-s-12 text">
                         <h2>Ortofoto</h2>
                         <p>En rad av drönarbilder som lagts ihop och korrigerats bildar något som liknar en satellitkarta, men som är bra mycket mer detaljerad. Efter att man till exempel gjort en ny skogsväg eller en avverkning kan man uppdatera området i skogsbruksplanen med hjälp av ett ortofoto.</p>
@@ -68,9 +70,9 @@
                     <div class="col-6 col-s-12 image">
                         <img src="./images/Ortofoto.jpg" alt="">
                     </div>
-                </div>
+                </article>
 
-                <div class="row card last">
+                <article class="row card last">
                     <div class="col-6 col-s-12 text">
                         <h2>Mäklarfoto</h2>
                         <p>Inget kan sammanfatta huset så bra som en drönarbild. Hela huset med sina tillhörigheter kommer med och ger en säljande överblick för potentiella köpare. </p>
@@ -79,9 +81,9 @@
                     <div class="col-6 col-s-12 image">
                         <img src="./images/start-img.png" alt="">
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
 
 
         <footer>
@@ -91,9 +93,12 @@
         <script>
             // Max 450
             function funcMax450(varMax450) {
-                if (varMax450.matches) { // If media query matches
+                if (varMax450.matches)
+                {
                     document.getElementById("header-logo").src = "images/Logo.svg";
-                } else {
+                }
+                else
+                {
                     
                     document.getElementById("header-logo").src = "images/LogoText_Låg.png";
                 }
