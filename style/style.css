@@ -87,6 +87,10 @@ a {
   scrollbar-width: none;  /* Firefox */
 }
 
+#index main>section:not(:first-child) { 
+  margin-bottom: 50px;
+}
+
 
 /* || VARIABLES */
 
@@ -103,6 +107,17 @@ a {
   content: "";
   clear: both;
   display: table;
+}
+
+.center-box,
+main>section {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 95%;
+}
+
+main>section:first-child {
+  max-width: initial;
 }
 
 
@@ -173,6 +188,87 @@ background-color: #f4f4f4;
 	border: 2.5px solid #03a9f4;
 	border-radius: 50%;
 }
+
+/* Parallax cards */
+.parallax-cards {
+  max-width: 768px;
+}
+
+.parallax-cards img {
+  --margin: 20px;
+  --width-percent: 100%;
+  margin: 30px var(--margin);
+  position: relative;
+  z-index: 2;
+  width: calc(var(--width-percent) - var(--margin) * 2);
+  border-radius: 4px;
+}
+
+.parallax-cards div {
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
+  border-radius: 4px;
+  margin-top: -50px;
+  padding-top: 25px;
+}
+
+.parallax-cards h3 {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media only screen and (min-width: 600px) {
+
+  .parallax-cards img {
+    z-index: 1;
+    --width-percent: 80%;
+    --margin: 15px;
+  }
+
+  .parallax-cards div {
+    float: right;
+    z-index: 2;
+    padding: 25px;
+    margin: 15px;
+    padding-top: 30px;
+    margin-top: -150px;
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .parallax-cards img {
+    --width-percent: 80%;
+  }
+
+  .parallax-cards div {
+    padding: 40px;
+    padding-top: 50px;
+    margin-top: -200px;
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  .parallax-cards {
+    max-width: 992px;
+  }
+
+  .parallax-cards div {
+    padding: 55px;
+    padding-top: 70px;
+    width: 60%;
+  }
+}
+
 
 /* || SITEWIDE */
 
@@ -399,10 +495,6 @@ footer h2 {
   }
 }
 
-#index main>section:not(:first-child) { 
-  margin-bottom: 50px;
-}
-
 
 /* || GENERAL RESPONSIVE */
 
@@ -416,13 +508,6 @@ footer h2 {
 	float: left;
 	padding: 15px;
   width: 100%;
-}
-
-.center-box,
-main>section:not(:first-child) {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 95%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -457,15 +542,23 @@ main>section:not(:first-child) {
 
 @media only screen and (min-width: 992px) {
   .center-box,
-  main>section:not(:first-child) {
+  main>section {
       max-width: 960px;
+  }
+
+  main>section:first-child {
+    max-width: initial;
   }
 } 
 
 @media only screen and (min-width: 1200px) {
   .center-box,
-  main>section:not(:first-child) {
+  main>section {
       max-width: 1160px;
+  }
+
+  main>section:first-child {
+    max-width: initial;
   }
 }
 
@@ -565,110 +658,6 @@ main>section:not(:first-child) {
 
 /* | About */
 
-#about .image {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  padding: 30px 15px;
-}
-
-#about .image img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-#about .text-holder {
-  position: relative;
-  z-index: 1;
-  padding: 0;
-  /* display: flex; */
-  /* height: 100%; */
-}
-
-#about .text {
-  box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
-  border-radius: 4px;
-  padding: 15px;
-  padding-top: 40px;
-  margin-top: -50px;
-  margin-bottom: 20px;
-  background-color: #fff;
-}
-
-#about .text h3 {
-  margin-bottom: 0;
-}
-
-/* Responsive */
-@media only screen and (min-width: 600px) {
-  #about {
-    margin-bottom: 25px;
-  }
-
-  #about .image {
-      z-index: 1;
-  }
-
-  #about .text-holder {
-      float: right;
-      z-index: 3;
-  }
-  
-  #about .text {
-      padding: 25px;
-      padding-top: 30px;
-      margin-top: -250px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #about .text {
-    padding: 50px;
-    padding-top: 60px;
-    margin-top: -300px;
-  }  
-}
-
-@media only screen and (min-width: 992px) {
-  #about {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		/* max-width: 700px; */
-		margin-bottom: 50px;
-	}
-
-	#about .image {
-		height: 100%;
-		z-index: 3;
-	}
-
-	#about .text-holder {
-		z-index: 1;
-		padding: 0px;
-		margin: 0px;
-		height: auto;
-	}
-
-	#about .text {
-		margin: 0 0 0 -50px;
-		padding: 60px;
-		padding-left: 115px;
-		margin-left: -80px;
-	}
-}
-
-@media only screen and (min-width: 1200px) {
-  #about .image img{
-		max-height: 380px;
-	}
-
-	#about .text {
-		margin: 0 0 0 -80px;
-		padding: 90px;
-		padding-left: 125px;
-	}
-}
 
 /* | Services */
 
@@ -796,42 +785,18 @@ main>section:not(:first-child) {
 
 /* | Contact */
 
-#contact {
-  margin-bottom: 0px;
-}
-
-#contact .text-holder {
-  position: relative;
-  z-index: 1;
-  padding: 0;
-}
-
-#contact .text {
-  box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
-  border-radius: 4px;
-	padding: 20px 15px 60px 15px;
-  background-color: #fff;
-}
-
-#contact .text h3 {
-  margin-bottom: 0;
-}
-
-#contact .text .button {
+#contact-card .button {
 	float: right;
 }
 
-#contact .image {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  padding: 0 15px;
-  margin-top: -35px;
+#contact-card div {
+  float: left;
+  margin-top: initial;
 }
 
-#contact .image img {
-  width: 100%;
-  border-radius: 4px;
+#contact-card img {
+  float: right;
+  margin-top: -200px;
 }
 
 /* Responsive */
@@ -851,11 +816,10 @@ main>section:not(:first-child) {
     /* margin-top: -250px; */
   }
 
-  #contact .image {
-    z-index: 1;
+  /* #contact-card img {
     float: right;
     margin-top: -200px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 768px) {
