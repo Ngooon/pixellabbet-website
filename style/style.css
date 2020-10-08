@@ -284,7 +284,7 @@ header nav input:checked ~ label span:after {
 
 
 main>:first-child {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/DJI_0037.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/DJI_0037.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -321,7 +321,7 @@ main>:first-child h2+* {
 }
 
 #index main>:first-child {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
   height: 500px;
 }
 
@@ -351,7 +351,7 @@ main {
   background-color: #fff;
   box-shadow: 0px 0px 10px 5px rgba(0,0,0,.1);
   margin-bottom: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   min-height: calc(100vh - 50px - 100px);
 }
 
@@ -393,6 +393,11 @@ footer h2 {
 }
 
 
+#index main>section:not(:first-child) { 
+  margin-bottom: 50px;
+}
+
+
 
 
 
@@ -406,35 +411,35 @@ footer h2 {
   z-index: 2;
   position: relative;
   margin-top: -30px;
-  margin-bottom: 50px;
   background-color: white;
-  width: 96%;
-  display: table;
   border-radius: 4px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: row;
+}
+
+#three-cards>section {
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#three-cards>section p {
+  color: gray;
+}
+
+#three-cards>section:last-child {
+  border: none;
 }
 
 #three-cards>h2:first-child {
   display: none;
 }
 
-#three-cards .card {
-  display: table-cell;
-  text-align: center;
-  border-bottom: 1px solid lightgray;
-  height: 100%;
-  margin: 0;
-}
-
-#three-cards .card p {
-  color: gray;
-}
-
 
 /* About */
-
-#about {
-  margin-bottom: 0px;
-}
 
 #about .image {
   position: relative;
@@ -574,13 +579,15 @@ footer h2 {
 @media only screen and (min-width: 600px) {
 
 		/* Three-cards */
-
-    #three-cards .card {
-        border-bottom: none;
-        border-right: 1px solid lightgray;
+    #three-cards {
+      grid-template-rows: 100%; 
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: column;
     }
-    #three-cards .last {
-        border-right: none;
+
+    #three-cards>section {
+      border-bottom: none;
+      border-right: 1px solid lightgray;
     }
     
 
