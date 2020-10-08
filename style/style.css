@@ -278,6 +278,74 @@ header nav input:checked ~ label span:after {
 }
 
 
+
+
+/* Site header */
+
+
+main>:first-child {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/DJI_0037.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  height: 250px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+  
+main>:first-child>:first-child {
+  height: auto;
+  max-width: 650px;
+}
+
+main>:first-child h2 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+main>:first-child h2+* {
+  letter-spacing: .25px;
+  line-height: 22px;
+}
+
+main>:first-child h2,
+main>:first-child h2+* {
+  /* margin: 10px 10px; */
+  margin: 15px 20px;
+}
+
+#index main>:first-child {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
+  height: 500px;
+}
+
+#index main>:first-child h2+* {
+  margin-bottom: 40px;
+}
+
+#index main>:first-child .button {
+  border-radius: 50px;
+  margin: auto 10px;
+  --btn-padding-height: 14px;
+  --btn-padding-width: 20px;
+}
+
+
+/* Responsive Site header */
+
+@media only screen and (min-width: 600px) {
+  #index main>:first-child .button {
+    margin: auto 20px;
+  }
+}
+
+
 /* Footer */
 main {
   background-color: #fff;
@@ -298,7 +366,7 @@ footer {
 }
 
 footer h2 {
-  font-size: 16px;
+  font-size: 1em;
   padding: 0;
   margin: 0;
   line-height: 50px;
@@ -329,52 +397,6 @@ footer h2 {
 
 
 /* Home site */
-
-/* Start image */
-
-main>:first-child{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 100px;
-  height: 500px;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-}
-
-main>:first-child .center-box {
-  max-width: 650px;
-}
-
-main>:first-child h2 {
-  font-size: 45px;
-  font-weight: bold;
-}
-
-main>:first-child p {
-  letter-spacing: .25px;
-  line-height: 22px;
-}
-
-main>:first-child h2,
-main>:first-child p {
-  margin: 0 20px 25px;
-}
-
-main>:first-child .button {
-	border-radius: 50px;
-	/* padding: 14px 19px; */
-}
-
-main>:first-child .button.white:hover {
-	background-color: rgba(255, 255, 255, 0.25);
-}
 
 
 /* Three cards */
@@ -1044,7 +1066,7 @@ span.error:empty {
 
 /* Site header image */
 
-.site-header {
+/* .site-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/DJI_0037.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1078,7 +1100,7 @@ span.error:empty {
 .site-header .center-box h2,
 .site-header .center-box p {
   margin: 15px 20px 15px;
-}
+} */
 
 
 
@@ -1095,14 +1117,11 @@ span.error:empty {
 	padding: 15px;
 }
 
-.center-box {
+.center-box,
+main>section:not(:first-child) {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 95%;
-}
-
-.center-box {
-  max-width: 95%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1140,14 +1159,16 @@ span.error:empty {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .center-box {
+  .center-box,
+  main>section:not(:first-child) {
       max-width: 960px;
   }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .center-box {
+  .center-box,
+  main>section:not(:first-child) {
       max-width: 1160px;
   }
 }
