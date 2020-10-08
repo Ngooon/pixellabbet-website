@@ -128,6 +128,8 @@ background-color: #f4f4f4;
 	border-radius: 50%;
 }
 
+
+
 /* Header */
 
 header {
@@ -144,7 +146,7 @@ header .center-box {
   height: 100%;
 }
 
-header ul {
+header nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -152,19 +154,20 @@ header ul {
   background-color: #fff;
 }
 
-header li a {
+header nav li a {
   display: block;
   padding: 20px 20px;
+  height: 60px;
   border-top: 1px solid #f4f4f4;
   text-decoration: none;
 }
 
-header li a:hover,
-header .menu-btn:hover {
+header nav li a:hover,
+header nav input:hover {
   background-color: #f4f4f4;
 }
 
-header .logo {
+header div>:first-child {
   display: block;
   float: left;
   font-size: 2em;
@@ -174,13 +177,13 @@ header .logo {
   height: 100%;
 }
 
-header .logo img {
+header div>:first-child img {
   height: 100%;
 }
 
 /* menu */
 
-header .menu {
+header nav ul {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
@@ -188,7 +191,7 @@ header .menu {
 
 /* menu icon */
 
-header .menu-icon {
+header nav label {
   cursor: pointer;
   float: right;
   padding: 49px 20px;
@@ -196,7 +199,7 @@ header .menu-icon {
   user-select: none;
 }
 
-header .menu-icon .nav-icon {
+header nav label span {
   background: #333;
   display: block;
   height: 2px;
@@ -205,8 +208,8 @@ header .menu-icon .nav-icon {
   width: 18px;
 }
 
-header .menu-icon .nav-icon:before,
-header .menu-icon .nav-icon:after {
+header nav label span:before,
+header nav label span:after {
   background: #333;
   content: '';
   display: block;
@@ -216,59 +219,60 @@ header .menu-icon .nav-icon:after {
   width: 100%;
 }
 
-header .menu-icon .nav-icon:before {
+header nav label span:before {
   top: 5px;
 }
 
-header .menu-icon .nav-icon:after {
+header nav label span:after {
   top: -5px;
 }
 
 /* menu btn */
 
-header .menu-btn {
+header nav input {
   display: none;
 }
 
-header .menu-btn:checked ~ .menu {
+header nav input:checked ~ ul {
   max-height: 240px;
   box-shadow: 0px 10px 10px 5px rgba(0,0,0,.1);
 }
 
-header .menu-btn:checked ~ .menu-icon .nav-icon {
+header nav input:checked ~ label span {
   background: transparent;
 }
 
-header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+header nav input:checked ~ label span:before {
   transform: rotate(-45deg);
   top:0;
 }
 
-header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+header nav input:checked ~ label span:after {
   transform: rotate(45deg);
   top:0;
 }
 
 
 @media (min-width: 800px) {
-  header ul {
+  header nav ul {
     box-shadow: none;
   }
 
-  header li {
+  header nav li {
     float: left;
 
   }
-  header li a {
-    padding: 41px 25px;
+  header nav li a {
+    padding: 40px 25px;
+    height: 100px;
     border-top: none;
   }
-  header .menu {
+  header nav ul {
     clear: none;
     float: right;
     max-height: none;
   }
-  header .menu-icon {
+  header nav label {
     display: none;
   }
 }
@@ -328,7 +332,7 @@ footer h2 {
 
 /* Start image */
 
-#start-img{
+main>:first-child{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -344,31 +348,31 @@ footer h2 {
   z-index: 0;
 }
 
-#start-img .center-box {
+main>:first-child .center-box {
   max-width: 650px;
 }
 
-#start-img h2 {
+main>:first-child h2 {
   font-size: 45px;
   font-weight: bold;
 }
 
-#start-img p {
+main>:first-child p {
   letter-spacing: .25px;
   line-height: 22px;
 }
 
-#start-img h2,
-#start-img p {
+main>:first-child h2,
+main>:first-child p {
   margin: 0 20px 25px;
 }
 
-#start-img .button {
+main>:first-child .button {
 	border-radius: 50px;
 	/* padding: 14px 19px; */
 }
 
-#start-img .button.white:hover {
+main>:first-child .button.white:hover {
 	background-color: rgba(255, 255, 255, 0.25);
 }
 
