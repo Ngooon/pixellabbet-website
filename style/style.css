@@ -458,6 +458,7 @@ main>:first-child {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 100px;
+  margin-bottom: 25px;
   height: 250px;
   color: #fff;
   text-align: center;
@@ -632,7 +633,7 @@ footer h2 {
 #three-cards {
   position: relative;
   z-index: 2; /* Place above site header. */
-  margin-top: -30px;
+  margin-top: -60px;
   background-color: white;  /* Can't be transparent. */
   box-shadow: 0 1px 8px 4px rgba(0,0,0,.1);
   border-radius: 4px;
@@ -787,38 +788,52 @@ footer h2 {
 
 /* | SERVICES SITE */
 
-.card .button {
+article .button {
   float: right;
 }
 
-.card {
+article {
   margin-top: 50px;
   padding: 10px;
   border-bottom: 2px solid #f4f4f4;
+  align-items: center;
 }
 
-.card .image {
-  padding: 25px;
+article div {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
-.card .image img {
+article div:nth-child(1){ /* Text div */
+  padding: 5px;
+}
+
+article div:nth-child(2) {  /* Image div */
+  padding: 0;
+  min-height: 100%;
+}
+
+article img {
+  margin: 0;
   width: 100%;
   border-radius: 4px;
+  object-fit: contain;
+  object-position: center;
 }
 
-.card.last {
+article:last-child {
   border: none;
 }
 
 /* Responsive */
 @media only screen and (min-width: 600px) {
-  .card {
+  article {
       padding: 25px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .card .image {
+  article div:nth-child(2) {  /* Image div */
       padding: 15px 20px 30px 40px;
   }
 }
