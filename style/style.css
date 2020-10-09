@@ -176,14 +176,16 @@ background-color: #f4f4f4;
 }
 
 /* Icons */
-.icon{
+.icon,
+svg {
 	height: 90px;
 	width: 90px;
 	margin: 20px 0 15px 0;
 	fill: #03a9f4;
 }
 
-.icon.ring {
+.icon.ring,
+svg.ring {
 	padding: 10px;
 	border: 2.5px solid #03a9f4;
 	border-radius: 50%;
@@ -207,17 +209,33 @@ background-color: #f4f4f4;
 .parallax-cards div {
   position: relative;
   z-index: 1;
-  margin: 10px;
   padding: 20px;
+  margin: 10px;
   background-color: #ffffff;
   box-shadow: 0 0px 8px 4px rgba(0,0,0,.1);
   border-radius: 4px;
-  margin-top: -50px;
-  padding-top: 25px;
 }
 
 .parallax-cards h3 {
   margin-bottom: 0;
+}
+
+/* Textbox first, image last */
+.parallax-cards div:first-child { /* Selects div if placed in first place. */
+  float: left;
+  padding-bottom: 30px;
+}
+
+.parallax-cards img:last-child {  /* Selects image if placed in second place */
+  float: right;
+  margin-top: -25px;
+}
+
+/* Image first, text last */
+.parallax-cards div:last-child {  /* Selects div if div and image is placed in revers order */
+  float: right;
+  padding-top: 25px;
+  margin-top: -50px;
 }
 
 /* Responsive */
@@ -230,13 +248,19 @@ background-color: #f4f4f4;
   }
 
   .parallax-cards div {
-    float: right;
     z-index: 2;
     padding: 25px;
     margin: 15px;
-    padding-top: 30px;
-    margin-top: -150px;
     width: 75%;
+  }
+
+  .parallax-cards img:last-child {
+    margin-top: -20vw;
+  }
+
+  .parallax-cards div:last-child {
+    padding-top: 30px;
+    margin-top: -22vw;
   }
 }
 
@@ -247,14 +271,17 @@ background-color: #f4f4f4;
 
   .parallax-cards div {
     padding: 40px;
-    padding-top: 50px;
-    margin-top: -200px;
     width: 65%;
   }
-}
 
-@media only screen and (min-width: 992px) {
-  
+  .parallax-cards img:last-child {
+    margin-top: -175px;
+  }
+
+  .parallax-cards div:last-child {
+    padding-top: 50px;
+    margin-top: -200px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -264,8 +291,15 @@ background-color: #f4f4f4;
 
   .parallax-cards div {
     padding: 55px;
-    padding-top: 70px;
     width: 60%;
+  }
+
+  .parallax-cards img:last-child {
+    margin-top: -200px; /* -20vw */
+  }
+
+  .parallax-cards div:last-child {
+    padding-top: 70px;
   }
 }
 
@@ -662,27 +696,25 @@ footer h2 {
 /* | Services */
 
 #services {
-  border-radius: 4px;
-	padding: 20px 0px;
-	margin-bottom: 50px;
+	padding: 5px 0px;
 }
 
-#services .headliner {
+#services>h2:first-of-type,
+#services>p:first-of-type {
   text-align: center;
-  padding-top: 20px;
 }
 
-#services .headliner p {
+#services p {
   color: gray;
 }
 
-#services .cards {
+#services div {
   margin-right: auto;
   margin-left: auto;
 	max-width: 850px;
 }
 
-#services .card {
+#services section {
   text-align: center;
   border-radius: 3px;
   margin: 10px 0px;
@@ -690,20 +722,20 @@ footer h2 {
   box-shadow: 0 0px 6px 3px rgba(0,0,0,.1);
 }
 
-#services .card .icon{
+#services section svg{
   height: 75px;
 	margin: 20px 0px 25px 0px;
 }
 
-#services .card p {
+#services section p {
 	margin-bottom: 35px;
 }
 
-#services .info p {
+#services aside p {
   margin-bottom: 7px;
 }
 
-#services .cards .button {
+#services .button {
 	border-width: 3px;
 	float: none;
 	box-shadow: none;
@@ -711,18 +743,18 @@ footer h2 {
 
 /* Responsive */
 @media only screen and (min-width: 600px) {
-  #services .card {
+  #services section {
     border: none;
     margin: 0 0 20px 0;
     padding-bottom: 30px;
     text-align: left;
   }
 
-  #services .card .last {
+  #services section:last-of-type {
     margin: 0;
   }
 
-  #services .card .icon {
+  #services section svg {
     margin: 20px 25px 25px 0px;
     float: left;
     display: flex;
@@ -730,119 +762,26 @@ footer h2 {
     align-items: center;
   }
 
-  #services .card p {
+  #services section p {
     margin-bottom: 20px;
   }
 
-  #services .cards .button {
+  #services section .button {
     float: right;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  #services .info p {
+  #services aside p {
 		margin-bottom: 16px;
 	}
 }
 
-@media only screen and (min-width: 992px) {
-  #contact {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 50px;
-	}
-
-	#contact .text-holder {
-		z-index: 1;
-		padding: 0px;
-		margin: 0px;
-		height: auto;
-	}
-
-	#contact .text {
-		padding: 60px;
-		padding-right: 120px;
-	}
-
-	#contact .image {
-		margin: 0 0 0 -80px;
-		height: 100%;
-		z-index: 3;
-	}
-}
-
-@media only screen and (min-width: 1200px) {
-  #contact .image img{
-		max-height: 380px;
-	}
-
-	#contact .text {
-		padding: 90px;
-		padding-right: 135px;
-	}
-}
 
 /* | Contact */
 
 #contact-card .button {
 	float: right;
-}
-
-#contact-card div {
-  float: left;
-  margin-top: initial;
-}
-
-#contact-card img {
-  float: right;
-  margin-top: -200px;
-}
-
-/* Responsive */
-@media only screen and (min-width: 600px) {
-  #contact {
-    margin-bottom: 25px;
-  }
-
-  #contact .text-holder {
-    float: left;
-    z-index: 3;
-  }
-  
-  #contact .text {
-    padding: 25px;
-    padding-top: 30px;
-    /* margin-top: -250px; */
-  }
-
-  /* #contact-card img {
-    float: right;
-    margin-top: -200px;
-  } */
-}
-
-@media only screen and (min-width: 768px) {
-  #contact .text {
-		padding: 50px;
-		padding-top: 60px;
-	}
-
-	#contact .text .button {
-		margin-top: 10px;
-	}
-
-	#contact .image {
-		margin-top: -250px;
-	}
-}
-
-@media only screen and (min-width: 992px) {
-
-}
-
-@media only screen and (min-width: 1200px) {
-  
 }
 
 
