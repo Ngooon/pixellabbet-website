@@ -13,6 +13,8 @@ UTILITIES
 PATTERNS
   Buttons
   Icons
+  Paralax cards
+  Articles
 
 SITEWIDE
   Header
@@ -29,9 +31,7 @@ SITES
   Index/Home
     Site header
     Three cards
-    About
     Services
-    Contact
   Services site
   Technics site
   Contact site
@@ -191,7 +191,7 @@ svg.ring {
 	border-radius: 50%;
 }
 
-/* Parallax cards */
+/* PARALLAX CARDS */
 .parallax-cards {
   max-width: 768px;
 }
@@ -218,6 +218,10 @@ svg.ring {
 
 .parallax-cards h3 {
   margin-bottom: 0;
+}
+
+.parallax-cards .button {
+	float: right;
 }
 
 /* Textbox first, image last */
@@ -300,6 +304,57 @@ svg.ring {
 
   .parallax-cards div:last-child {
     padding-top: 70px;
+  }
+}
+
+/* ARTICLES */
+article {
+  margin-top: 50px;
+  padding: 10px;
+  border-bottom: 2px solid #f4f4f4;
+  align-items: center;
+}
+
+article div {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+article div:nth-of-type(1){ /* Text div */
+  padding: 5px;
+}
+
+article div:nth-of-type(2) {  /* Image div */
+  padding: 0;
+  min-height: 100%;
+}
+
+article img {
+  margin: 0;
+  width: 100%;
+  border-radius: 4px;
+  object-fit: contain;
+  object-position: center;
+}
+
+article:last-child {
+  border: none;
+}
+
+article .button {
+  float: right;
+}
+
+/* Responsive */
+@media only screen and (min-width: 600px) {
+  article {
+    padding: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  article div:nth-of-type(2) {  /* Image div */
+    padding: 15px 20px 30px 40px;
   }
 }
 
@@ -691,9 +746,6 @@ footer h2 {
 }
 
 
-/* | About */
-
-
 /* | Services */
 
 #services {
@@ -779,123 +831,10 @@ footer h2 {
 }
 
 
-/* | Contact */
-
-#contact-card .button {
-	float: right;
-}
-
-
 /* | SERVICES SITE */
-
-article .button {
-  float: right;
-}
-
-article {
-  margin-top: 50px;
-  padding: 10px;
-  border-bottom: 2px solid #f4f4f4;
-  align-items: center;
-}
-
-article div {
-  margin: 0;
-  margin-bottom: 25px;
-}
-
-article div:nth-child(1){ /* Text div */
-  padding: 5px;
-}
-
-article div:nth-child(2) {  /* Image div */
-  padding: 0;
-  min-height: 100%;
-}
-
-article img {
-  margin: 0;
-  width: 100%;
-  border-radius: 4px;
-  object-fit: contain;
-  object-position: center;
-}
-
-article:last-child {
-  border: none;
-}
-
-/* Responsive */
-@media only screen and (min-width: 600px) {
-  article {
-      padding: 25px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  article div:nth-child(2) {  /* Image div */
-      padding: 15px 20px 30px 40px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-
-} 
-
-@media only screen and (min-width: 1200px) {
-
-}
 
 
 /* | TECHNICS SITE */
-
-.card .button {
-  float: right;
-}
-
-.card {
-  margin-top: 50px;
-  padding: 10px;
-  border-bottom: 2px solid #f4f4f4;
-}
-
-.card h2 {
-  margin-bottom: 0;
-}
-
-.card .image {
-  padding: 25px;
-}
-
-.card .image img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-.card.last {
-  border: none;
-}
-
-/* Responsive */
-@media only screen and (min-width: 600px) {
-  .card {
-      padding: 25px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .card .image {
-      padding: 30px 20px 30px 40px;
-  }  
-}
-
-@media only screen and (min-width: 992px) {
-
-} 
-
-@media only screen and (min-width: 1200px) {
-
-} 
 
 
 /* | CONTACT SITE */
