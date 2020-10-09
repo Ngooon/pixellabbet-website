@@ -32,8 +32,6 @@ SITES
     Site header
     Three cards
     Services
-  Services site
-  Technics site
   Contact site
     Form
 
@@ -831,43 +829,24 @@ footer h2 {
 }
 
 
-/* | SERVICES SITE */
-
-
-/* | TECHNICS SITE */
-
-
 /* | CONTACT SITE */
 
-.row {
-  margin-top: 0px;
-  padding: 10px;
-}
-
-.info .line {
-  padding: 10px 0;
-  display: table;
-}
-
-.info .line .icon {
+#contact-site>section>section:nth-child(1) section svg {
   height: 50px;
   width: 50px;
   float: left;
   margin: 0;
   margin-right: 25px;
-  display: table-cell;
 }
 
-.info .line .text {
+#contact-site>section>section:nth-child(1) section a {
   vertical-align: middle;
   line-height: 25px;
   text-decoration: none;
-  display: table-cell;
 }   
 
-/* | Form */
-
-input {
+/* Form */
+#contact-site input {
   line-height: 25px;
 }
 
@@ -903,35 +882,35 @@ input.button{
   font-size: 13px;
 }
 
-span.error:empty {
+.error:empty {
   display: none;
   height: 0px;
 }
 
 /* Responsive */
 @media only screen and (min-width: 600px) {
-  .form h3 {
+  #contact-site>section>section:nth-child(2) h3 {
       margin-bottom: 10px;
   }
   
-  .form .sent {
+  .sent {
       margin-bottom: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .info .line {
+  #contact-site>section>section:nth-child(1) section {
       padding: 10px 0;
   }
   
-  .info .line .icon {
+  #contact-site>section>section:nth-child(1) section svg {
       height: 70px;
       width: 70px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .info .line {
+  #contact-site>section>section:nth-child(1) section {
       padding: 15px 0;
   }
 } 
