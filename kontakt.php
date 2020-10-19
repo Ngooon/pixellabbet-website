@@ -39,7 +39,7 @@
                         <li><a href="./teknik.html">Teknik</a></li>
                         <li><a href="./kontakt.php">Kontakt</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </header>
         <main id="contact-site">
@@ -51,6 +51,7 @@
             </section>
 
             <section class="row">
+                <h2>Kontaktinformation</h2>
                 <section class="col-5 col-s-6">
                     <section class="clearfix">
                         <svg viewBox="0 0 24 24">

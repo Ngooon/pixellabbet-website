@@ -61,6 +61,10 @@ h2 {
   font-size: 2em;
 }
 
+main>section>h2 {
+  display: none;
+}
+
 h3 {
   font-size: 1.1em;
   text-transform: uppercase;
@@ -753,6 +757,7 @@ footer h2 {
 #services>h2:first-of-type,
 #services>p:first-of-type {
   text-align: center;
+  display: block;
 }
 
 #services p {
