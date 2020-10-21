@@ -510,7 +510,7 @@ header nav input:checked ~ label span:after {
 /* | SITE HEADER */
 
 main>:first-child {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/DJI_0037.jpg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/DJI_0037.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -662,7 +662,7 @@ footer h2 {
 /* Site header */
 /* Small design differences on index site header. */
 #index main>:first-child {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/start-img.png");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/start-img.png"); */
   height: 500px;
 }
 

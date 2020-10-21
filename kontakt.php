@@ -43,7 +43,7 @@
             </div>
         </header>
         <main id="contact-site">
-            <section class="site-header">
+            <section id="site-header" class="site-header">
                 <div class="center-box">
                     <h2>Kontakt</h2>
                     <p>Kontakta oss om du har några frågor eller idéer om hur en drönare kan hjälpa dig.</p>   
@@ -192,16 +192,33 @@
             // Max 450
             function funcMax450(varMax450) {
                 if (varMax450.matches) { // If media query matches
-                    document.getElementById("header-logo").src = "images/Logo.svg";
+                    document.getElementById("header-logo").src = "./images/logo/logo.svg";
                 } else {
-                    
-                    document.getElementById("header-logo").src = "images/LogoText_Låg.png";
+                    document.getElementById("header-logo").src = "images/logo/text.png";
                 }
             }
         
             var varMax450 = window.matchMedia("(max-width: 450px)")
             funcMax450(varMax450) // Call listener function at run time
             varMax450.addListener(funcMax450) // Attach listener function on state changes
+
+            // Season image
+            var path = "./images/";
+            var season = "";
+
+            var date = new Date;
+            var month = date.getMonth() + 1;
+            if (month <= 4 || month >= 11) {    // Vinter
+                season = "vinter";
+            } else if (month <=9) { // Sommer
+                season = "somer";
+            } else {    // Fall
+                season = "fall";
+            }
+            
+            var siteStartImgName = "site-start-img.jpg";
+            var siteStartImgPath = path + season + "/" + siteStartImgName;
+            document.getElementById("site-header").style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("' + siteStartImgPath + '")';
         </script>
     </body>
 </html>
